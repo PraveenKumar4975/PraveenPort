@@ -14,7 +14,13 @@ const jwt = require("jsonwebtoken");
 const app = express();
 const PORT = 5000;
 
-app.use(express.json()); // parse JSON requests
+app.use(express.json()); // parse JSON requests 
+app.use((req, res, next) => {
+    res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+    res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
+    next();
+});
+
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.use(express.static("public"));
