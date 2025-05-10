@@ -28,7 +28,13 @@ const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
 // CORS Configuration
 const allowedOrigins = [
   "http://localhost:3000",
+
   "https://kaleidoscopic-chimera-030684.netlify.app","https://frontend-u9r1.onrender.com/",
+
+  "https://frontend-u9r1.onrender.com",
+  // "https://kaleidoscopic-chimera-030684.netlify.app",
+
+
 ];
 
 const corsOptions = { 
